@@ -17,6 +17,7 @@ and decrypting messages without sending it over the network.
  4. Now **A** and **B** mix in their own secrets:
   - **A** calculates `$ k = S_A \circ (S_B \circ \sigma) $`
   - **B** calculates `$ k = S_B \circ (S_A \circ \sigma) $`
- 5. **C** only knows `$ \sigma $`, `$ F_A $`, and `$ F_B $` and there
- is no way to know `$ S_A $` and `$ S_B $` given a strong enough `$ f $`.
- **C** also cannot reconstruct `$ k $`.
+ 5. **C** only knows `$ \sigma $`, `$ S_A \circ \sigma $`, and
+ `$ S_B \circ \sigma $` and there is no way to recover `$ S_A $` or
+ `$ S_B $` from what he/she knows. Thus **C** cannot reconstruct
+ `$ k $`, given a strong enough operation `$ \circ $`.
