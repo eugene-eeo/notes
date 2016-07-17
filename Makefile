@@ -1,17 +1,16 @@
 watch:
 	make rebuild
 	watchmedo shell-command \
-		--patterns="*.md" \
 		--ignore-directories \
+		--patterns="*.md" \
 		--command='noterender one --src="$${watch_src_path}" --dst=build' \
-		--recursive \
 		--drop \
-		.
+		notes
 
 rebuild:
 	@mkdir -p build
 	@rm -r build
-	@noterender --src='.' --dst='build'
+	@noterender --src='notes/' --dst='build/'
 
 setup:
 	pip install watchdog
