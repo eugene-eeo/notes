@@ -8,10 +8,9 @@ watch:
 		.
 
 render:
+	@mkdir -p build
 	@rm -r build
-	@mkdir build
 	@noterender --src='.' --dst='build'
 
 setup:
 	pip install watchdog
-	mkdir build
