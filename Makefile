@@ -14,3 +14,9 @@ rebuild:
 
 setup:
 	pip install watchdog
+
+DIR = ~/code/eugene-eeo.github.com/notes
+
+deploy:
+	cp ./build/* ${DIR}
+	genhtmlindex ${DIR} > ${DIR}/index.html
