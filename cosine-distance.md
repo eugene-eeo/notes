@@ -15,7 +15,7 @@ following data for how users A-D rate movies M1-M4:
 | M4  |   | 4 | 5 |   |
 </div>
 
-We can convert the user's preferences into vectors of 4 dimensions:
+Express users' preferences as vectors of `$ \Bbb{R}^4 $`:
 
 `$$
 \begin{aligned}
