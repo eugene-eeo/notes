@@ -26,7 +26,7 @@ D &= \langle 5, 1, 0, 0 \rangle \\
 \end{aligned}
 $$`
 
-To find out the two most similar users, we can use the cosine distance
+To find out how similar two users are, we can use the cosine distance
 formula, given two vectors `$ A $` and `$ B $`:
 
 `$$
@@ -34,9 +34,9 @@ formula, given two vectors `$ A $` and `$ B $`:
 $$`
 
 The best case is that the two users have exactly the same interests and
-their 'preference vectors' are collinear (`$ \cos\theta = 1 $`). Example
-calculation for users B and D, to show that they are 'completely
-different':
+their preference vectors are collinear (`$ \cos\theta = 1 $`). Example
+calculation for users B and D, to show that they are completely
+different:
 
 `$$
 \frac{0 * 5 + 0 * 1 + 5 * 0 + 4 * 0}{\sqrt{5^2 + 4^2} \sqrt{5^2 + 1^2}} = 0
