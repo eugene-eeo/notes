@@ -2,20 +2,20 @@
 title: Consistent Hash Rings
 ---
 
-A hash ring is a ring from `$ [0, 1) $`. Given any hash function
-we can define a new, ring-ified function `$ \text{hash}'(x) $`,
-for a set of machine IDs `$ M = \{m_1, m_2, \ldots, m_n\} $`:
+A hash ring is a ring from `$ [0, 1) $`. Given any hash function that
+has the range `$ [0, R) $` we can define a new, ring-ified function
+`$ h(x) $`:
 
 `$$
-\text{hash}'(x) = \frac{1}{|M|} * \text{hash}(x)
+h(x) = \frac{\text{hash}(x)}{R}
 $$`
 
-For each `$ m_i $`, store `$ \text{hash}'(m_i) $` on the ring. To store
-any value `$ v $` in the cluster, store it in the machine corresponding
-to the lowest value of `$ m_i $` such that `$ m_i \leq \text{hash}'(v) $`
-(clockwise). Then to 'scale up' the cluster it only suffices to re-hash
-the machine IDs with a new `$ |M| $` and store it in the ring. Big
-problem:
+For each `$ m_i $` in a set of machine IDs `$ M = \{m_1, m_2, \ldots,
+m_n\} $`, store `$ h(m_i) $` on the ring. To store any value
+`$ v $` in the cluster, store it in the machine corresponding to the
+highest value of `$ m_j $` such that `$ m_j \leq h(v) $` (clockwise).
+Then to 'scale up' the cluster, just hash and store the ID of the new
+machine on the ring. Big problem:
 
 > If hash of `$ m_a $` and `$ m_b $` are very similar in value then one
 > machine will end up getting most of the keys, while the other only a
