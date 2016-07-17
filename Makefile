@@ -1,13 +1,14 @@
 watch:
+	make rebuild
 	watchmedo shell-command \
 		--patterns="*.md" \
 		--ignore-directories \
-		--command="make render" \
+		--command='noterender one --src="$${watch_src_path}" --dst=build' \
 		--recursive \
 		--drop \
 		.
 
-render:
+rebuild:
 	@mkdir -p build
 	@rm -r build
 	@noterender --src='.' --dst='build'
