@@ -15,15 +15,14 @@ m_n\} $`, store `$ h(m_i) $` on the ring. To store any value
 `$ v $` in the cluster, store it in the machine corresponding to the
 highest value of `$ m_j $` such that `$ m_j \leq h(v) $` (clockwise).
 Then to 'scale up' the cluster, just hash and store the ID of the new
-machine on the ring. Big problem:
+machine on the ring. Problem:
 
 > If hash of `$ m_a $` and `$ m_b $` are very similar in value then one
 > machine will end up getting most of the keys, while the other only a
 > small subset. This is not desirable since it introduces tendency for
 > single point of failure.
 
-To solve this issue we can introduce a *replica count* parameter (not
-related to data replication) `$ r $`. For each machine ID `$ m_i $`,
-hash `$ (m_i, 1), (m_i, 2), \ldots, (m_i, r) $` and store it on the ring.
-To store `$ v $` the same process is repeated, but we get more even
-distribution of values.
+Solution: a *replica count* parameter (not related to data replication)
+`$ r $`. For each machine ID `$ m_i $`, hash `$ (m_i, 1), (m_i, 2),
+\ldots, (m_i, r) $` and store it on the ring. To store `$ v $` the same
+process is repeated, but we get more even distribution of values.
