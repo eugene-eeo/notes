@@ -3,7 +3,7 @@ title: Normal Vector
 ---
 
 The normal vector to any plane `$ ax + by + cz = k $` is
-`$ \langle a,b,c \rangle $`. From the definition of the dot product:
+`$ ai + bj + ck $`. From the definition of the dot product:
 
 `$$
 N \cdot \begin{bmatrix}
