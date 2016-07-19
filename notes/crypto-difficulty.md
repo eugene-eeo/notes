@@ -12,8 +12,9 @@ has length `$ N $`:
 `$$
 \begin{aligned}
 \Pr(0) &= \frac{s - 1}{s} = 1 - \frac{1}{s} \\
-\Pr(n) &= \frac{1^n \times s^{N-n}}{s^N} \\
-       &= \frac{1}{s^n}
+\Pr(n) &= \frac{1}{s^n} \times \frac{s-1}{s} \times (\frac{s}{s})^{N-n-1} \\
+       &= \frac{s - 1}{s^{n+1}} \\
+\Pr(N) &= \frac{1}{s^N}
 \end{aligned}
 $$`
 
