@@ -3,9 +3,10 @@
 for i in build/*; do
     cat $i | html-minifier \
         --remove-attribute-quotes \
+        --collapse-boolean-attributes \
+        --collapse-whitespace \
         --remove-comments \
         --remove-optional-tags \
-        --collapse-boolean-attributes \
         --minify-js \
         --minify-css \
         -o $i.min
