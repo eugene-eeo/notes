@@ -18,5 +18,6 @@ setup:
 DIR = ~/code/eugene-eeo.github.com/notes
 
 deploy:
+	./compress.sh
 	cp ./build/* ${DIR}
 	genhtmlindex ${DIR} > ${DIR}/index.html
