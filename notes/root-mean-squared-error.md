@@ -47,5 +47,5 @@ processing meaningful rows) in a large population `$ N $`, where
 harder:
 
 `$$
-\text{F}(r+1) - \text{F}(r) \approx \Pr(R=r+1)
+\text{F}(r+1) - \text{F}(r) = \Pr(R=r+1)
 $$`
