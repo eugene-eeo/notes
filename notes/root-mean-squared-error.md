@@ -30,21 +30,15 @@ Then if we improve the model by decreasing the error by some amount
 `$ \delta \epsilon $`, the RMSE decreases by the same amount. It is
 exponentially harder to achieve more and more accurate results.
 
-**Intuition:** In a dataset of `$ N $` rows where there are at most
-`$ k $` meaningful rows, our probabilistic model selects `$ n $` rows
-with a uniform distribution. Then take `$ p = \frac{k}{N} $` to be the
-probability of a rows (datum) being meaningful. Then the probability
-of getting `$ r $` meaningful data follows binomial distribution:
+**Intuition:** In a dataset of `$ N $` rows, our probabilistic model
+selects `$ n $` rows with a uniform distribution. Then take `$ K $`
+to be the probability of a rows (datum) being meaningful. Then the
+probability of getting `$ r $` meaningful data follows [hypergeometric](https://en.wikipedia.org/wiki/Hypergeometric_distribution)
+distribution, since the number of meaningful rows decreases with
+each pick:
 
 `$$
-R \sim \text{B}(n, p)
-$$`
-
-Which for large values of `$ n $` and small values of `$ p $` can
-be approximated by the Poisson distribution with `$ \lambda = np $`:
-
-`$$
-R \sim \text{P}_\text{o}(\lambda)
+\frac{{K \choose r} {N - K \choose n - r}}{N \choose n}
 $$`
 
 Then we can see that getting more and more accurate results (by
@@ -53,5 +47,5 @@ processing meaningful rows) in a large population `$ N $`, where
 harder:
 
 `$$
-\text{F}(r) \approx 1 - \sum_{i=0}^r{\Pr(R=i)}
+\text{F}(r+1) - \text{F}(r) \approx \Pr(R=r+1)
 $$`
