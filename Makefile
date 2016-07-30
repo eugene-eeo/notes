@@ -15,7 +15,7 @@ rebuild:
 setup:
 	pip install watchdog
 
-DIR = ~/code/eugene-eeo.github.com/notes
+DIR = ~/code/website/notes
 
 deploy:
 	make rebuild
