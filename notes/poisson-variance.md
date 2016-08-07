@@ -2,7 +2,7 @@
 title: Poisson Variance
 ---
 
-**Problem: prove that `$ E(X) = \lambda $`**, where
+**Problem: prove that `$ \text{Var}(X) = \lambda $`**, where
 `$ X \sim \text{P}_\text{o}(\lambda) $`. Proof:
 
 `$$
