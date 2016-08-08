@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function build_one() {
-    printf " $(tput setaf 2)Building$(tput sgr0) $1\n"
+    printf " $(tput setaf 2)Compressing$(tput sgr0) $1\n"
     cat "$1" | html-minifier \
         --remove-attribute-quotes \
         --collapse-boolean-attributes \
