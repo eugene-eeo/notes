@@ -8,7 +8,7 @@ function big_uint(x) {
 }
 
 function leftPadZeros(x, zeroCount) {
-   for (var i = 0; i < (zeroCount - x.length); i++) {
+   for (var i = (zeroCount - x.length); i--;) {
       x = "0" + x;
    }
    return x;
