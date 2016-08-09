@@ -14,14 +14,13 @@ $$`
 
 0. The question is about distances - find some point `$ y $` that has the
    minimum distance from all the other points.
-0. `$ \mu $` is the same as the midpoint of multiple number on a number
+0. `$ \mu $` is the same as the midpoint of multiple numbers on a number
    line. Hence the smallest total distance possible for all the points
    from some point `$ y $` will be the midpoint itself, `$ \mu $`.
 
-**Proof:** we want to allow `$ x_i $` to vary so we cannot take full/proper
-deriviatives. Also taking a partial deriviative for each of `$ x_1, x_2 $`
-etc is not good as we will end up with `$ n $` equations to solve. Finally
-the answer should ideally be independent of the number of 'dimensions'.
+**Proof:** taking a partial deriviative for each of `$ x_i $` is not good
+as we will end up with `$ n $` equations to solve. Finally the answer
+should ideally be independent of the number of 'dimensions':
 
 `$$
 \frac{\delta S}{\delta y} = \frac{1}{n} (-2) \sum{(x_i - y)} = 0
