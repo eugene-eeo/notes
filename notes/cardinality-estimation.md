@@ -34,21 +34,20 @@ We'll end up with the table:
 
 | `00` | `01` | `10` | `11` |
 |:----:|:----:|:----:|:----:|
-| 0    | 1    | 2    | 1    |
+| 0    | 1    | 0    | 1    |
 
 The probability of getting `$ n $` zeroes at the end is `$ 2^{-n} $`,
-assuming we have a good enough hash function. Also if someone tells us
-he's got `$ n $` heads in a row we can say that he needs to have at least
-spun `$ 2^n $` coins. In the same way we can have an estimate of the size
-of the set by doing the same calculation.
+assuming we have a good enough hash function. Note a very simple concept:
+if something happens 1/8ths of the time we expect that if we repeat the
+action 8 times at least 1 will be successful.
 
-So a (bad) estimate for the size of the set, given a counter of values
-`$ c_1, c_2, c_3, \ldots $` will be given by:
+In the same way a (bad) estimate for the size of the set, given a counter
+of values `$ c_1, c_2, c_3, \ldots $` will be given by:
 
 `$$
 2^{c_1} + 2^{c_2} + \ldots = \sum_{i=1}^{n}{2^{c_i}}
 $$`
 
-If we evaluate it for our table it gives 9. Which is wrong but the
+If we evaluate it for our table it gives 6. Which is wrong but the
 estimate gets better as we increase the number of buckets (hence increase
 the length of the prefix) and put more data inside it.
