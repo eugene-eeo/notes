@@ -11,9 +11,17 @@ for {
       break
    }
    if err != nil && err != io.EOF {
-      return nil, err
+      // handle error here
    }
    b := buffer[:length]
    // do something with b, which is now appropriately sliced
+   // but slicing it would not allocate another buffer, just
+   // a slice header. if we want to go one step further use:
+   //
+   // b := buffer
+   // if length != BLOCK_SIZE {
+   //     b = buffer[:length]
+   // }
+   //
 }
 ```
