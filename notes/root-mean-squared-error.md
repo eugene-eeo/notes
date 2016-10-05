@@ -32,7 +32,7 @@ exponentially harder to achieve more and more accurate results.
 
 **Intuition:** In a dataset of `$ N $` rows, our probabilistic model
 selects `$ n $` rows with a uniform distribution. Then take `$ K $`
-to be the probability of a rows (datum) being meaningful. Then the
+to be the total number of meaningful rows in the dataset. Then the
 probability of getting `$ r $` meaningful data follows [hypergeometric](https://en.wikipedia.org/wiki/Hypergeometric_distribution)
 distribution, since the number of meaningful rows decreases with
 each pick:
