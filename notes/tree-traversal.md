@@ -11,8 +11,8 @@ n \approx \sum_{d=0}^{D}{\mu^d}
 $$`
 
 Given a "perfect" tree where each node has `$ \mu $` children, the
-maximum number of nodes we need to inspect, given breadth first
-traversal is the number of nodes in the last depth, `$ \mu^D $`.
+maximum number of nodes we need to store in a FIFO queue for breadth
+first traversal is the number of nodes in the last depth, `$ \mu^D $`.
 Rearranging to find `$ \mu^D $` in terms of `$ n $`:
 
 `$$
@@ -31,7 +31,7 @@ O(n(1 - \frac{1}{\mu})) \approx O(n)
 $$`
 
 For the same conditions, a depth first traversal is much cheaper.
-We need only to store `$ D $` items in memory (just for traversing).
+We need only to store `$ D $` nodes in a stack (just for traversing).
 So the space required is given by:
 
 `$$
