@@ -23,8 +23,8 @@ $$`
 \mu^D = \frac{n (\mu - 1) + 1}{\mu}
 $$`
 
-I think a good approximation that makes breadth-first algorithms
-look quite bad is then:
+I think a good approximation that unfortunately makes breadth-first
+algorithms look quite bad is then:
 
 `$$
 O(n(1 - \frac{1}{\mu})) \approx O(n)
