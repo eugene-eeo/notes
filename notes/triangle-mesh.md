@@ -28,8 +28,8 @@ coordinates which "surrounds" the point in `$ O(\log n) $` time.
 
 ```
 function initialise(triangles)
-    let X := Mapping of floats to set of triangles
-    let Y := Mapping of floats to set of triangles
+    let X := Sorted mapping of floats to set of triangles
+    let Y := Sorted mapping of floats to set of triangles
     foreach ∆ of triangles:
         foreach vertex of ∆:
             X[vertex.X].add(∆)
