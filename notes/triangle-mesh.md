@@ -33,7 +33,7 @@ function initialise(triangles)
     foreach ∆ of triangles:
         foreach vertex of ∆:
             X[vertex.X].add(∆)
-            X[vertex.Y].add(∆)
+            Y[vertex.Y].add(∆)
         end
     end
     return X, Y
