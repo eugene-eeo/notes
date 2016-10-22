@@ -47,14 +47,15 @@ in the x-dimension and similar for the y-dimension, but will give a higher
 memory cost in the worst case for a very 'detailed' mesh, i.e. one with
 a lot of very small triangles.
 
-To test if a point is in the quadtree-ified mesh:
+To get the bounding triangle of a point, given the quadtree-ified mesh:
 
 ```
-def in_quadtree(tree, point):
+def bounding_triangle(tree, point):
     node = tree.node_bounding_point(point)
     for triangle in node.triangles:
         if triangle.bounds(point):
             return triangle
+    return None
 ```
 
 A very rough estimate for the running time is `$ O(\log n) $` where `$ n $`
