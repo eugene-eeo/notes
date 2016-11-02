@@ -115,10 +115,10 @@ F = \langle
 $$`
 
 Then `$ \text{cost}(H) $` would evaluate to `$ F_1(5) + F_2(3) + F_3(2) + F_4(1) = 90 $`.
-Of course the 'real life' cost function vector would be exponential, and
-will be empirically determined. Then to actually merge two pairs, we
-need to take the maximum of each component of each high-score vector
-and then take the union of the addresses. For instance:
+Of course the 'real life' cost function vector would be exponential. To
+merge the two pairs, take the maximum of each component of each high-score
+vector and then take the address of the maximum high score vector, or
+in case of ties, the union. For instance:
 
 `$$
 \text{merge}(
