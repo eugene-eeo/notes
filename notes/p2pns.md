@@ -122,8 +122,8 @@ in case of ties, the union. For instance:
 
 `$$
 \text{merge}(
-   P(1, \langle 1, 2 \rangle),
-   P(2, \langle 100, 0 \rangle)) = P(2, \langle 100, 2 \rangle)
+   P(a_1, \langle 1, 2 \rangle),
+   P(a_2, \langle 100, 0 \rangle)) = P(a_2, \langle 100, 2 \rangle)
 $$`
 
 Then the update operation is defined such that an update is only accepted
