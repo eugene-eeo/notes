@@ -29,7 +29,7 @@ $$`
 In discrete time systems:
 
 `$$
-u(t) = K_p e(t) + K_i \sum^{t}_{\tau=0}{e(\tau) \delta} + K_d \frac{e(t) - e(t - \delta)}{\delta}
+u(t) = K_p e(t) + K_i \sum^{t}_{\tau=0}{e(\tau) \delta t} + K_d \frac{e(t) - e(t - \delta t)}{\delta t}
 $$`
 
-Where `$ \delta $` is the 'sampling interval'.
+Where `$ \delta t $` is the sampling interval/timestep.
