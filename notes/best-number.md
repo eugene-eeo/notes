@@ -30,8 +30,8 @@ Then isolate `$ y $` to one side of the equation:
 
 `$$
 \begin{aligned}
-\sum{x_i - y} &= 0 \\
-    \sum{x_i} &= n y \\
-            y &= \frac{\sum{x_i}}{n} = \mu
+\sum{(x_i - y)} &= 0 \\
+      \sum{x_i} &= n y \\
+              y &= \frac{\sum{x_i}}{n} = \mu
 \end{aligned}
 $$`
