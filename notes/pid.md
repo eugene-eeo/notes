@@ -12,8 +12,8 @@ e(t) = \text{desired} - \text{measured}
 $$`
 
 The controller attempts to adjust the output of a control variable
-(e.g. the amount of force applied to a knob, the voltage given to a
-heating coil, etc.) `$ u(t) $` to reduce the error over time.
+(e.g. the change in the voltage given to a heating coil) `$ u(t) $`
+to reduce the error over time.
 
 `$$
 u(t) = K_p e(t) + K_i \int^{t}_{0}{e(\tau)}d\tau + K_d \frac{de(t)}{dt}
@@ -32,4 +32,10 @@ In discrete time systems:
 u(t) = K_p e(t) + K_i \sum^{t}_{\tau=0}{e(\tau) \delta t} + K_d \frac{e(t) - e(t - \delta t)}{\delta t}
 $$`
 
-Where `$ \delta t $` is the sampling interval/timestep.
+Where `$ \delta t $` is the sampling interval/timestep. The process
+variable, (e.g. the actual value of the voltage given to a heating
+coil) `$ PV(t) $` is usually defined in discrete time systems as:
+
+`$$
+PV(t+\delta t) = PV(t) + u(t)
+$$`
