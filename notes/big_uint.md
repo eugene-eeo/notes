@@ -1,5 +1,5 @@
 ---
-title: big unsigned integers #justJSthings
+title: big unsigned integers
 ---
 
 ```js
