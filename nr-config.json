@@ -1,0 +1,5 @@
+{
+    "src": "notes",
+    "dst": "build",
+    "template": "template.html"
+}
