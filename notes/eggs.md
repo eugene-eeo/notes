@@ -7,7 +7,7 @@ given `$ e $` eggs and `$ f $` floors, find the minimum number of
 egg drops in the worse case to determine the floor that the egg
 breaks. We can assume that the egg does not break or get damaged
 (and as such can be re-used indefinitely) as long as the floor
-it is dropped on `$ \le f_{\text{breaking}} $`.
+it is dropped on `$ \lt f_{\text{breaking}} $`.
 
 Let `$ W(e,f) $` be the minimum number of egg drops we need to
 perform, in the worse case given some `$ e $` and some `$ f $`.
