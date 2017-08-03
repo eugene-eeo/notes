@@ -9,8 +9,8 @@ S = u^0 + u^1 + u^4 + u^5
 $$`
 
 More generally given a set of exponents `$ E $`, for instance
-in the previous example `$ E = \{ 0, 1, 4, 5 \} $`. More rigorously,
-we can write:
+in the previous example `$ E = \{ 0, 1, 4, 5 \} $` — we can
+write more rigorously:
 
 `$$
 S = \sum_{i \in E}{u^i}, \, E \subseteq \mathbb{Z}^{+}_{0}
