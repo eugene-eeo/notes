@@ -18,7 +18,7 @@ Play fast and loose with the notation; we claim the following:
 \begin{aligned}
 \ln{(n+1)} &= \Theta(\ln{n} + \frac{1}{n+1}) \\
            &= \Theta(\ln{n} + \ln{e^{\frac{1}{n+1}}}) \\
-           &= \Theta(\ln{n \times e^{\frac{1}{n+1}}})
+           &= \Theta(\ln{(n e^{\frac{1}{n+1}})})
 \end{aligned}
 $$`
 
@@ -27,7 +27,7 @@ within the `$ \ln{ \ldots } $` function). We must now show that
 the following limit holds true, for some value of `$ \alpha $`:
 
 `$$
-\lim_{n \to \infty}{\frac{ n \times e^{\frac{1}{n+1}}}{ n+1 }} = \alpha
+\lim_{n \to \infty}{\frac{ n e^{\frac{1}{n+1}}}{ n+1 }} = \alpha
 $$`
 
 In fact we will prove a stronger bound with `$ \alpha = 1 $`:
